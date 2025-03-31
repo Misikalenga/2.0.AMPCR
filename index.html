@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz AMPCR</title>
+</head>
+<body>
+
+<!-- bouton -->
+    <div class="nav">
+
+        <div class="blocPlus" id="quizH">
+            <div class="plus">Quiz Difficile</div>
+        </div>
+
+
+        <p class="p">score :   <span id="notes"></span></p>
+        
+        
+
+    </div>
+    
+    <div class="body">
+
+        <div class="div">
+
+
+            <!-- QUIZ Hard -->
+            <div class="block" id="blockQuizH">
+                <h1>Quiz Difficile AMPCR</h1>
+                <button id="startH">Remettre le compteur à zéro</button>
+                <div class="nav">
+
+                    <div class="info"><h5>Quiz ?</h5><div class="choix" id="carteH"><div class="on" id="carteOnH"></div></div></div>
+                    <div class="info"><h5>inverser</h5><div class="choix" id="inverserH"><div class="on" id="inverserOnH"></div></div></div>
+                </div>
+
+                
+
+                    <h3 for="note">Quel est la definition de :</h3>
+                    <div class="infoAnki">
+                        <div id="askQuizH"></div>
+                        <div class="carteBlock" id="carteBlock">
+                            <div class="carte" id="carte">
+                                <div class="carteUp" id="action">
+                                    <div id="rendu" >
+                                    </div>
+                                    <div class="info" id="quizStartH"></div>
+                                    
+                                </div>
+                                
+                                <div class="carteDown" id="action2">
+                                    <div>
+                                        <div id="reponse">
+                                        </div>
+                                        <div class="info">
+                                            <button id="oui">Je connais</button>
+                                            <button id="non">je connais pas</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      
+                    <div>
+                        <div class="info">
+                            <button id="rep1H">a</button>
+                            <button id="rep2H">b</button>
+                        </div>
+                        <div class="info">
+                            <button id="rep3H">c</button>
+                            <button id="rep4H">d</button>
+                        </div>
+                    </div>
+                    
+                    
+
+                    <h3 id="revisionsTitreH">Réponses</h3>
+                
+                    <div  id="revisionsH"> </div>
+                    </div>
+
+                </div>
+        </div>
+
+
+
+    
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

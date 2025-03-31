@@ -1,0 +1,356 @@
+body{
+    font: 16px/28px "Source Sans Pro", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.body{
+    /* background: rgb(255, 255, 255); */
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("https://png.pngtree.com/background/20230527/original/pngtree-processor-microcontroller-computer-motherboard-picture-image_2770520.jpg") no-repeat center center;
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition: 0.2s;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+
+.block{
+    display: none;
+    background: rgb(255, 255, 255);
+    border: 2px solid white;
+    width: 80%;
+    border-radius: 20px;
+    padding: 20px;
+    /* margin: 30px 0; */
+    box-shadow: 0px 0px 22px 0px rgba(145,145,145,0.58);
+    transition: 0.2s;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.choix{
+    background: rgb(240, 240, 240);
+    border-radius: 20px;
+    width: 50px;
+    box-shadow: 0px 0px 22px 0px rgba(145,145,145,0.58) inset;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: 0.8s;
+    margin: 0 10px;
+}
+
+.on{
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+    border-radius: 50%;
+    background: rgb(121, 187, 248);
+    border: 1px solid white;
+    box-shadow: 0px 0px 22px 0px rgba(145,145,145,0.58);
+
+    transition: 0.3s;
+}
+
+p{
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.p{
+    font-size: 15px;
+    display: flex;
+}
+
+.div{
+    display: contents;
+}
+
+#quiz{
+    background: rgb(121, 187, 248);
+}
+
+#quizH{
+    background: rgb(248, 121, 121);
+}
+
+#anki{
+    background: rgb(246, 248, 121);
+}
+
+#notesQ, #notesQH{
+    display:none;
+}
+
+.blocPlus{
+    
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 5px;src: ;
+    box-shadow: 0px 0px 22px 0px rgba(145,145,145,0.58);
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    margin: 0;
+    transform: scale(0.93);
+    text-align: center;
+}
+
+.blocPlus:active{
+    box-shadow: 0px 0px 22px 0px rgba(145,145,145,0.58) inset;
+}
+
+.plus{
+    font-size: 15px;
+    color: rgb(100, 100, 100);
+    transition: 0.3s;
+    scale: 90%;
+  
+   
+}
+
+.plus:hover{
+    scale: 100%;
+}
+
+.plus:active{
+    color: rgb(0, 0, 0);
+    scale: 100%;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+.infoAnki{
+    min-height: 450px ;
+    display: flex;
+    
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.infodiv{
+    width: 15em;
+}
+
+.carteBlock{
+    width: 225px;
+    height: 375px;  
+    /* transition: all 0.8s ease; */
+    perspective: 300px;
+}
+
+/* .carteBlock:hover .carte{
+    transform: rotateY(-180deg);
+} */
+
+.carte{
+    height: 100%;
+    width: 100%;
+    transition: all 0.8s ease;
+    transform-style: preserve-3d;
+    position: relative;
+
+}
+
+b{
+    padding: 5px;
+    border-radius: 5px;
+}
+.carteUp, .carteDown{
+    border-radius: 20px;
+    border: 10px solid rgb(240, 240, 240);
+    padding: 10px ;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 22px 0px rgba(145,145,145,0.58);
+}
+
+.carteUp{
+    height: 100%;
+    width: 100%;
+    background: rgb(248, 121, 121);
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.carteDown{
+    height: 100%;
+    width: 100%;
+    background: rgb(240, 240, 240);
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+button{
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid rgb(216, 216, 216);
+    transition: 0.2s;
+    box-shadow: 0px 0px 22px 0px rgba(240, 240, 240, 0.685);
+    font-weight: 700;
+
+}
+
+button:hover {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid rgb(32, 114, 238);
+    
+}
+
+button:active {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid rgb(32, 114, 238);
+    box-shadow: 0px 0px 22px 0px rgba(32,114,238,0.58);
+    
+}
+
+
+
+#non{
+    background: rgb(248, 121, 121);
+
+}
+
+
+#oui{
+    background: rgb(121, 248, 178);
+
+}
+
+#rep1{
+    background: rgb(248, 121, 121);
+}
+
+#rep2{
+    background: rgb(121, 187, 248);
+}
+
+#rep3{
+    background: rgb(121, 248, 178);
+}
+
+#rep4{
+    background: rgb(246, 248, 121);
+}
+
+#rep1H{
+    background: rgb(248, 121, 121);
+}
+
+#rep2H{
+    background: rgb(121, 187, 248);
+}
+
+#rep3H{
+    background: rgb(121, 248, 178);
+}
+
+#rep4H{
+    background: rgb(246, 248, 121);
+}
+
+
+input{
+    width: 50px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 2px solid rgb(32, 114, 238);
+    transition: 0.5s;
+
+}
+
+input:hover{
+    width: 50px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 2px solid rgb(32, 114, 238);
+    box-shadow: 0px 0px 22px 0px rgba(32,114,238,0.58);
+}
+
+input:focus{
+    width: 50px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 2px solid rgb(32, 114, 238);
+    box-shadow: 0px 0px 22px 0px rgba(32,114,238,0.58);
+    font-weight: 700;
+    color: rgb(66, 66, 66);
+}
+
+
+#notes,#notesQ,#notesQH{
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    transition: 1s;
+    padding: 0 10px;
+    box-shadow: 0px 0px 22px 0px rgba(240, 240, 240, 0.685);
+}
+
+#notes:hover,#notesQ:hover,#notesQH:hover{
+    /* border: 2px solid rgb(32, 114, 238); */
+    border-radius: 5px;
+    box-shadow: 0px 0px 22px 0px rgba(32, 114, 238, 0.288);
+}
+
+span{
+    font-weight: 700;
+    color: rgb(66, 66, 66);
+}
+
+.anim{
+    animation: move 1s infinite;
+}
+
+@keyframes move {
+    0%{
+        transform: translateY(0px);
+    }
+    10%{
+        transform: translateY(-2px);
+    }
+    40%{
+        transform: translateY(-8px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    60%{
+        transform: translateY(-8px);
+    }
+    90%{
+        transform: translateY(-2px);
+    }
+}
