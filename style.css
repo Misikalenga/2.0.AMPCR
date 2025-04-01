@@ -17,7 +17,34 @@ body{
     border-radius: 20px;
 }
 
+#backBlock{
+    position:absolute;
+    width: 80%;
+    height: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
 
+.back{
+    background: rgb(248, 121, 121);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    
+}
+
+.backFlex{
+    display: flex;
+    justify-content: flex-end;
+}
 
 .block{
     display: none;

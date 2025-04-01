@@ -26,9 +26,11 @@
 
         <div class="div">
 
-            <div class="block" id="popUp">
-
-
+            <div class="block" id="backBlock">
+                <div class="backFlex" >
+                    <div class="back" id="back"  onclick="back()"><h5>X</h5></div>
+                </div>
+                <div id="popUp"></div>
             </div>
 
             <!-- QUIZ Hard -->
@@ -36,9 +38,12 @@
                 <h1>Quiz Difficile AMPCR</h1>
                 <button id="startH">Remettre le compteur à zéro</button>
                 <div class="nav">
-
                     <div class="info"><h5>Quiz ?</h5><div class="choix" id="carteH"><div class="on" id="carteOnH"></div></div></div>
-                    <div class="info"><h5>inverser</h5><div class="choix" id="inverserH"><div class="on" id="inverserOnH"></div></div></div>
+                    <div>
+                        <div class="info" ><h5 style="width: 100px;">revoir les même carte</h5><div class="choix" id="revoirH"><div class="on" id="revoirOnH"></div></div></div>
+                        <div class="info" ><h5 style="width: 100px;">inverser</h5><div class="choix" id="inverserH"><div class="on" id="inverserOnH"></div></div></div>
+                    </div>
+
                 </div>
 
                 

@@ -12,7 +12,6 @@ quizH.addEventListener('click', function(){
 })
 
 
-
 // Quiz Hard
 
 const color = ["rgb(248, 121, 121)","rgb(121, 248, 178)","rgb(246, 248, 121)","rgb(121, 187, 248)"]
@@ -83,7 +82,21 @@ inverserH.addEventListener('click', function() {
     }
 })
 
+let revoirH = document.getElementById("revoirH");
+let revoirOnH = document.getElementById("revoirOnH");
+let revoirActiveH = false;
 
+revoirH.addEventListener('click', function() {
+    if (revoirActiveH == false){
+        revoirActiveH = true;
+        revoirOnH.style.transform = "translateX(24px)";
+        revoirOnH.style.background = "rgb(121, 248, 178)";
+    }else{
+        revoirActiveH = false;
+        revoirOnH.style.transform = "translateX(0px)";
+        revoirOnH.style.background = "rgb(121, 187, 248)";
+    }
+})
 
 
 // bouton start H
@@ -133,9 +146,24 @@ let saveQuestH = "";
 let saveValH = "";
 let saveRepH ="";
 
+// Quiz question H end
+
 let positif = false;
 
 let couleurCarte = "";
+
+//syllabus appel
+
+let backBlock = document.getElementById("backBlock");
+
+let backSyllabus = document.getElementById("back");
+
+
+let scrollPage = 0;
+let pageLieu = document.documentElement.scrollTop + (document.documentElement.clientHeight /2 ) ;
+let syllab = Object.entries(exam);
+let [cleS,valS]=syllab[0];
+//syllabus appel end
 
 function incorecteRep() {
         let compte = 0;
@@ -270,9 +298,11 @@ function repQ(){
                     score += 1;
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + ';"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
-                    repQuizH.splice(indexQH,1);
-                    questionH.splice(indexQH,1);
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+indexQH+')"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    if(revoirActiveH == false){
+                        repQuizH.splice(indexQH,1);
+                        questionH.splice(indexQH,1);
+                    }
                     corecteRep()
                     setTimeout(quizAskH, 1000);
                     ankiAsk();
@@ -284,7 +314,7 @@ function repQ(){
                 if (repQuizH.length > 4){
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + ';"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+indexQH+')"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
                     setTimeout(quizAskH, 1000);
                     ankiAsk();
                     incorecteRep();
@@ -300,9 +330,11 @@ function repQ(){
                     score += 1;
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + ';"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
-                    repQuizH.splice(indexQH,1);
-                    questionH.splice(indexQH,1);
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+indexQH+')"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    if(revoirActiveH == false){
+                        repQuizH.splice(indexQH,1);
+                        questionH.splice(indexQH,1);
+                    }
                     corecteRep()
                     setTimeout(quizAskH, 1000);
                     ankiAsk();
@@ -314,7 +346,7 @@ function repQ(){
                 if (repQuizH.length > 4){
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + ';"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+indexQH+')"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
                     setTimeout(quizAskH, 1000);
                     ankiAsk();
                     incorecteRep();
@@ -330,9 +362,11 @@ function repQ(){
                     score += 1;
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + ';"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
-                    repQuizH.splice(indexQH,1);
-                    questionH.splice(indexQH,1);
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+indexQH+')"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    if(revoirActiveH == false){
+                        repQuizH.splice(indexQH,1);
+                        questionH.splice(indexQH,1);
+                    }
                     corecteRep()
                     setTimeout(quizAskH, 1000);
                     ankiAsk();
@@ -345,7 +379,7 @@ function repQ(){
                 if (repQuizH.length > 4){
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + ';"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+indexQH+')"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
                     setTimeout(quizAskH, 1000);
                     ankiAsk();
                     incorecteRep();
@@ -361,9 +395,11 @@ function repQ(){
                     score += 1;
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + ';"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
-                    repQuizH.splice(indexQH,1);
-                    questionH.splice(indexQH,1);
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+indexQH+')"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    if(revoirActiveH == false){
+                        repQuizH.splice(indexQH,1);
+                        questionH.splice(indexQH,1);
+                    }
                     corecteRep()
                     setTimeout(quizAskH, 1000);
                     ankiAsk();
@@ -376,7 +412,7 @@ function repQ(){
                 if (repQuizH.length > 4){
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + ';"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+indexQH+')"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
                     setTimeout(quizAskH, 1000);
                     ankiAsk();
                     incorecteRep();
@@ -429,17 +465,27 @@ function ouiNon(){
         
 }
 
-popUp.style.display = "none";
+// syllabus
 
-let syllab = Object.entries(exam);
 
-let [cleS,valS]=syllab[0];
+function back(){
+    backBlock.style.display = "none";
+    clearInterval(scrollPage);
+}
+
 
 function syllabus(index){
-    popUp.style.display = "block";
+    scrollPage = setInterval(function() {
+        pageLieu = document.documentElement.scrollTop + (document.documentElement.clientHeight /2 ) ;
+        backBlock.style.top = pageLieu + "px";
+    },100);
+    
+    backBlock.style.display="block";
     [cleS,valS]=syllab[index];
     popUp.innerHTML ="<h3>" + cleS + "</h3>" + "<p>"+valS+"</p>";
 }
+
+// syllabus end
 
 function ankiAsk(){
     
@@ -492,7 +538,7 @@ non.addEventListener('click', function(){
     positif = false;
     total += 1;
     note.innerHTML= '<i>' + score + '/' + total + '</i>';
-    revisionH.innerHTML = '<p style="background:' + couleurCarte + ';"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
+    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+indexQH+')"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
     setTimeout(quizAskH, 1000);
     ankiAsk();
     incorecteRep();
@@ -506,9 +552,11 @@ oui.addEventListener('click', function(){
     score += 1;
     total += 1;
     note.innerHTML= '<i>' + score + '/' + total + '</i>';
-    revisionH.innerHTML = '<p style="background:' + couleurCarte + ';" onclick="syllabus('+indexQH+')"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
-    repQuizH.splice(indexQH,1);
-    questionH.splice(indexQH,1);
+    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+indexQH+')"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
+    if(revoirActiveH == false){
+        repQuizH.splice(indexQH,1);
+        questionH.splice(indexQH,1);
+    }
     corecteRep()
     setTimeout(quizAskH, 1000);
     ankiAsk();
