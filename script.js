@@ -43,6 +43,7 @@ let rep3H = document.getElementById("rep3H");
 let rep4H = document.getElementById("rep4H");
 let revisionH = document.getElementById("revisionsH");
 
+let popUp = document.getElementById("popUp");
 
 // option
 
@@ -428,6 +429,18 @@ function ouiNon(){
         
 }
 
+popUp.style.display = "none";
+
+let syllab = Object.entries(exam);
+
+let [cleS,valS]=syllab[0];
+
+function syllabus(index){
+    popUp.style.display = "block";
+    [cleS,valS]=syllab[index];
+    popUp.innerHTML ="<h3>" + cleS + "</h3>" + "<p>"+valS+"</p>";
+}
+
 function ankiAsk(){
     
     carteColorIndex = Math.floor(Math.random()* color.length);
@@ -493,7 +506,7 @@ oui.addEventListener('click', function(){
     score += 1;
     total += 1;
     note.innerHTML= '<i>' + score + '/' + total + '</i>';
-    revisionH.innerHTML = '<p style="background:' + couleurCarte + ';"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
+    revisionH.innerHTML = '<p style="background:' + couleurCarte + ';" onclick="syllabus('+indexQH+')"><b>' + saveQuestH + "</b> = " + ' "<u>' + saveValH + '</u>" ' + saveRepH + "<br/></p>" + revisionH.innerHTML;
     repQuizH.splice(indexQH,1);
     questionH.splice(indexQH,1);
     corecteRep()
