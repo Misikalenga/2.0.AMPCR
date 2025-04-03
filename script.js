@@ -160,7 +160,6 @@ let scrollPage = 0;
 let pageLieu = document.documentElement.scrollTop + (document.documentElement.clientHeight /2 ) ;
 
 let syllab = Object.entries(syllabusJson);
-let [cleS,valS]=syllab[0];
 //syllabus appel end
 
 function incorecteRep() {
@@ -476,20 +475,16 @@ function syllabus(index){
         backBlock.style.top = pageLieu + "px";
     },100);
     
-    console.log(index);
-
-    
     for (i in syllabusJson){
         if (i === index){
 
-            console.log(syllabusJson[i]);
-            syllabRep = syllabusJson[i]
+            syllabRep = syllabusJson[i];
         }
     }
 
 
     backBlock.style.display="block";
-    // [cleS,valS]=syllab[index];
+
     popUp.innerHTML ="<h3>" +  index + "</h3>" + "<p>"+ syllabRep +"</p>";
 }
 

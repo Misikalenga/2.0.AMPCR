@@ -1,5 +1,6 @@
 body{
     font: 16px/28px "Source Sans Pro", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    caret-color: transparent;
 }
 
 .body{
@@ -75,6 +76,7 @@ body{
     justify-content: flex-start;
     transition: 0.8s;
     margin: 0 10px;
+    cursor: pointer;
 }
 
 .on{
@@ -140,6 +142,7 @@ p{
 }
 
 .plus{
+    cursor: pointer;
     font-size: 15px;
     color: rgb(100, 100, 100);
     transition: 0.3s;
@@ -181,6 +184,7 @@ h1, h2{
 }
 
 .carteBlock{
+    cursor: pointer;
     width: 225px;
     height: 375px;  
     /* transition: all 0.8s ease; */
@@ -237,6 +241,7 @@ b{
 }
 
 button{
+    cursor: pointer;
     padding: 10px;
     background-color: white;
     border-radius: 10px;
@@ -267,45 +272,55 @@ button:active {
 
 
 #non{
+    cursor: pointer;
     background: rgb(248, 121, 121);
 
 }
 
 
 #oui{
+    cursor: pointer;
     background: rgb(121, 248, 178);
 
 }
 
 #rep1{
+    cursor: pointer;
     background: rgb(248, 121, 121);
 }
 
 #rep2{
+    cursor: pointer;
     background: rgb(121, 187, 248);
 }
 
 #rep3{
+    cursor: pointer;
     background: rgb(121, 248, 178);
 }
 
 #rep4{
+    cursor: pointer;
     background: rgb(246, 248, 121);
 }
 
 #rep1H{
+    cursor: pointer;
     background: rgb(248, 121, 121);
 }
 
 #rep2H{
+    cursor: pointer;
     background: rgb(121, 187, 248);
 }
 
 #rep3H{
+    cursor: pointer;
     background: rgb(121, 248, 178);
 }
 
 #rep4H{
+    cursor: pointer;
     background: rgb(246, 248, 121);
 }
 
