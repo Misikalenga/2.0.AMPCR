@@ -293,7 +293,7 @@ function repQ(){
                     score += 1;
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+saveQuestH+')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus(\'' + saveQuestH + '\')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
                     if(revoirActiveH == false){
                         repQuizH.splice(indexQH,1);
                         // syllab.splice(indexQH,1);
@@ -309,7 +309,7 @@ function repQ(){
                 if (repQuizH.length > 4){
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+saveQuestH+')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus(\'' + saveQuestH + '\')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
                     setTimeout(quizAskH, 1000);
                     ankiAsk();
                     incorecteRep();
@@ -325,7 +325,7 @@ function repQ(){
                     score += 1;
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+saveQuestH+')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus(\'' + saveQuestH + '\')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
                     if(revoirActiveH == false){
                         repQuizH.splice(indexQH,1);
                         // syllab.splice(indexQH,1);
@@ -341,7 +341,7 @@ function repQ(){
                 if (repQuizH.length > 4){
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+saveQuestH+')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus(\'' + saveQuestH + '\')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
                     setTimeout(quizAskH, 1000);
                     ankiAsk();
                     incorecteRep();
@@ -357,7 +357,7 @@ function repQ(){
                     score += 1;
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+saveQuestH+')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus(\'' + saveQuestH + '\')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
                     if(revoirActiveH == false){
                         repQuizH.splice(indexQH,1);
                         // syllab.splice(indexQH,1);
@@ -374,7 +374,7 @@ function repQ(){
                 if (repQuizH.length > 4){
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+saveQuestH+')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus(\'' + saveQuestH + '\')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
                     setTimeout(quizAskH, 1000);
                     ankiAsk();
                     incorecteRep();
@@ -390,7 +390,7 @@ function repQ(){
                     score += 1;
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+saveQuestH+')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus(\'' + saveQuestH + '\')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
                     if(revoirActiveH == false){
                         repQuizH.splice(indexQH,1);
                         // syllab.splice(indexQH,1);
@@ -407,7 +407,7 @@ function repQ(){
                 if (repQuizH.length > 4){
                     total += 1;
                     note.innerHTML = "<i>" + score + "/" + total + "</i>";
-                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+saveQuestH+')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
+                    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus(\'' + saveQuestH + '\')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
                     setTimeout(quizAskH, 1000);
                     ankiAsk();
                     incorecteRep();
@@ -476,21 +476,21 @@ function syllabus(index){
         backBlock.style.top = pageLieu + "px";
     },100);
     
+    console.log(index);
 
     
     for (i in syllabusJson){
-        if (i ===cleRepH){
+        if (i === index){
+
             console.log(syllabusJson[i]);
             syllabRep = syllabusJson[i]
-        }else{
-            console.log("sa marche pas");
         }
     }
 
 
     backBlock.style.display="block";
     // [cleS,valS]=syllab[index];
-    popUp.innerHTML ="<h3>" + cleRepH + "</h3>" + "<p>"+ syllabRep +"</p>";
+    popUp.innerHTML ="<h3>" +  index + "</h3>" + "<p>"+ syllabRep +"</p>";
 }
 
 // syllabus end
@@ -546,7 +546,7 @@ non.addEventListener('click', function(){
     positif = false;
     total += 1;
     note.innerHTML= '<i>' + score + '/' + total + '</i>';
-    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+saveQuestH+')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
+    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus(\'' + saveQuestH + '\')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
     setTimeout(quizAskH, 1000);
     ankiAsk();
     incorecteRep();
@@ -560,7 +560,7 @@ oui.addEventListener('click', function(){
     score += 1;
     total += 1;
     note.innerHTML= '<i>' + score + '/' + total + '</i>';
-    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus('+saveQuestH+')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
+    revisionH.innerHTML = '<p style="background:' + couleurCarte + '; cursor: pointer;" onclick="syllabus(\'' + saveQuestH + '\')"><b>' + saveQuestH + "</b> = " + saveRepH + "<br/></p>" + revisionH.innerHTML;
     if(revoirActiveH == false){
         repQuizH.splice(indexQH,1);
         // syllab.splice(indexQH,1);
